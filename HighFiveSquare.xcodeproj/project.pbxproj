@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C61FA09AE20E678E5B2752A9 /* Pods_HighFiveSquare.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A4BFDEFDFEDF643750F0FF18 /* Pods_HighFiveSquare.framework */; };
 		FCD59C61273AE5B400C496AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD59C60273AE5B400C496AB /* AppDelegate.swift */; };
 		FCD59C63273AE5B400C496AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD59C62273AE5B400C496AB /* SceneDelegate.swift */; };
 		FCD59C65273AE5B400C496AB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD59C64273AE5B400C496AB /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4BFDEFDFEDF643750F0FF18 /* Pods_HighFiveSquare.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HighFiveSquare.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A891C1E7C7804B56AF908C99 /* Pods-HighFiveSquare.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighFiveSquare.debug.xcconfig"; path = "Target Support Files/Pods-HighFiveSquare/Pods-HighFiveSquare.debug.xcconfig"; sourceTree = "<group>"; };
+		E1A9A55A83D8C6068AB9F379 /* Pods-HighFiveSquare.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HighFiveSquare.release.xcconfig"; path = "Target Support Files/Pods-HighFiveSquare/Pods-HighFiveSquare.release.xcconfig"; sourceTree = "<group>"; };
 		FCD59C5D273AE5B400C496AB /* HighFiveSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighFiveSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD59C60273AE5B400C496AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD59C62273AE5B400C496AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C61FA09AE20E678E5B2752A9 /* Pods_HighFiveSquare.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		079949C59076F1D88A3D71BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A891C1E7C7804B56AF908C99 /* Pods-HighFiveSquare.debug.xcconfig */,
+				E1A9A55A83D8C6068AB9F379 /* Pods-HighFiveSquare.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E6325C27E1AB06E6C153C0C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A4BFDEFDFEDF643750F0FF18 /* Pods_HighFiveSquare.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FCD59C54273AE5B400C496AB = {
 			isa = PBXGroup;
 			children = (
 				FCD59C5F273AE5B400C496AB /* HighFiveSquare */,
 				FCD59C5E273AE5B400C496AB /* Products */,
+				079949C59076F1D88A3D71BB /* Pods */,
+				E6325C27E1AB06E6C153C0C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FCD59C71273AE5C600C496AB /* Build configuration list for PBXNativeTarget "HighFiveSquare" */;
 			buildPhases = (
+				62047749B978CD0DD0AB7FC5 /* [CP] Check Pods Manifest.lock */,
 				FCD59C59273AE5B400C496AB /* Sources */,
 				FCD59C5A273AE5B400C496AB /* Frameworks */,
 				FCD59C5B273AE5B400C496AB /* Resources */,
+				A5B471AD553B72D0EB9AFB88 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		62047749B978CD0DD0AB7FC5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HighFiveSquare-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5B471AD553B72D0EB9AFB88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighFiveSquare/Pods-HighFiveSquare-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HighFiveSquare/Pods-HighFiveSquare-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HighFiveSquare/Pods-HighFiveSquare-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FCD59C59273AE5B400C496AB /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		FCD59C72273AE5C600C496AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A891C1E7C7804B56AF908C99 /* Pods-HighFiveSquare.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		FCD59C73273AE5C600C496AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E1A9A55A83D8C6068AB9F379 /* Pods-HighFiveSquare.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
