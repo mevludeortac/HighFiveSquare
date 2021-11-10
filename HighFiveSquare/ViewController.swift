@@ -45,6 +45,19 @@ class ViewController: UIViewController {
         }
     
     @IBAction func signInClicked(_ sender: Any) {
+        if usernameTxt.text != nil && passwordTxt.text != nil{
+            PFUser.logInWithUsername(inBackground: usernameTxt.text!, password: passwordTxt.text!) { (user, error) in
+                if error != nil {
+                    self.makeAlert(titleInput: "error", messageInput: "is empty")
+                    
+                }else{
+                    self.performSegue(withIdentifier: "toPlacesVC", sender: nil)
+                }
+            }
+            
+        }else{
+            makeAlert(titleInput: "error", messageInput: "wrong info, check please")
+        }
     
     }
     @IBAction func signUpClicked(_ sender: Any) {
@@ -58,8 +71,7 @@ class ViewController: UIViewController {
                 if error != nil{
                     self.makeAlert(titleInput: "error", messageInput: error?.localizedDescription ?? "error!!")
                 }else{
-                    //segue
-                    print("wow")
+                    self.performSegue(withIdentifier: "toPlacesVC", sender: nil)
                 }
             }
             
