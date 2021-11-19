@@ -310,6 +310,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="Xcv-ue-QVg"/>
         <segue reference="QU6-6v-SgC"/>
     </inferredMetricsTieBreakers>
     <resources>

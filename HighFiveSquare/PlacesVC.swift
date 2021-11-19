@@ -86,6 +86,14 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         alert.addAction(okButton)
         self.present(alert, animated: true, completion: nil)
     }
+    //segue işlemi gerçekleşmeden önce ne yapılacağını yazıyoruz
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        <#code#>
+    }
+    //bir satıra tıklandıktan sonraki işlemi yazıyoruz
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        <#code#>
+    }
         
 
     }
