@@ -11,6 +11,7 @@
 		FC6D4A79273EBBF400CA927E /* AddPlaceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D4A78273EBBF400CA927E /* AddPlaceVC.swift */; };
 		FC6D4A7D273ED95300CA927E /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D4A7C273ED95300CA927E /* MapVC.swift */; };
 		FC6D4A80273EF90900CA927E /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D4A7F273EF90900CA927E /* DetailsVC.swift */; };
+		FC6D4A84273F056A00CA927E /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC6D4A83273F056A00CA927E /* PlaceModel.swift */; };
 		FCD59C61273AE5B400C496AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD59C60273AE5B400C496AB /* AppDelegate.swift */; };
 		FCD59C63273AE5B400C496AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD59C62273AE5B400C496AB /* SceneDelegate.swift */; };
 		FCD59C65273AE5B400C496AB /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD59C64273AE5B400C496AB /* SignUpVC.swift */; };
@@ -27,6 +28,7 @@
 		FC6D4A78273EBBF400CA927E /* AddPlaceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceVC.swift; sourceTree = "<group>"; };
 		FC6D4A7C273ED95300CA927E /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		FC6D4A7F273EF90900CA927E /* DetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
+		FC6D4A83273F056A00CA927E /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
 		FCD59C5D273AE5B400C496AB /* HighFiveSquare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HighFiveSquare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCD59C60273AE5B400C496AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCD59C62273AE5B400C496AB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				FC6D4A78273EBBF400CA927E /* AddPlaceVC.swift */,
 				FC6D4A7C273ED95300CA927E /* MapVC.swift */,
 				FC6D4A7F273EF90900CA927E /* DetailsVC.swift */,
+				FC6D4A83273F056A00CA927E /* PlaceModel.swift */,
 				FCD59C66273AE5B400C496AB /* Main.storyboard */,
 				FCD59C69273AE5C600C496AB /* Assets.xcassets */,
 				FCD59C6B273AE5C600C496AB /* LaunchScreen.storyboard */,
@@ -218,6 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCD59C65273AE5B400C496AB /* SignUpVC.swift in Sources */,
+				FC6D4A84273F056A00CA927E /* PlaceModel.swift in Sources */,
 				FC6D4A7D273ED95300CA927E /* MapVC.swift in Sources */,
 				FCD59C61273AE5B400C496AB /* AppDelegate.swift in Sources */,
 				FCE81609273BF15A001485EA /* PlacesVC.swift in Sources */,

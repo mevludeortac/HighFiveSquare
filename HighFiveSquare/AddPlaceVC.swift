@@ -40,7 +40,25 @@ class AddPlaceVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
     }
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        //önce textfieldların boş olup olmadığnı kontrol et
+        //ardından imageview'ın boş olup olmadığnı kontrol et
+        //eğer boş iseler, uyarı ver
+        //boş değiller ise singleton yapısına uygun olarak  objelerimizi atıyoruz
+        if placeName.text != nil &&  placeType.text != nil && placeDescription.text != nil{
+            if let choosenImage = placeImageView.image {
+                let placeModel = PlaceModel.sharedInstance
+                placeModel.placeName = placeName.text!
+                placeModel.placeType = placeType.text!
+                placeModel.placedescription = placeDescription.text!
+                placeModel.placeImage = choosenImage
+            }
+            self.performSegue(withIdentifier: "toMapVC", sender: nil)
+        }else{
+            let alert = UIAlertController(title: "error", message: "check please", preferredStyle: UIAlertController.Style.alert)
+            let okButton = UIAlertAction(title: "ok", style: UIAlertAction.Style.default, handler: nil)
+            alert.addAction(okButton)
+        }
+        
     }
     
 }

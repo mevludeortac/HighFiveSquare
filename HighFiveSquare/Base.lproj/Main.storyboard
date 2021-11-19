@@ -101,7 +101,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="n5I-wy-wSM">
-                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -131,7 +131,7 @@
             <objects>
                 <viewController id="g32-Hi-GFh" customClass="DetailsVC" customModule="HighFiveSquare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eNz-ax-2ze">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="cmW-Tb-nG3">
@@ -186,7 +186,7 @@
             <objects>
                 <viewController id="Wb7-8e-Oiq" customClass="AddPlaceVC" customModule="HighFiveSquare" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G76-NU-Pzr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="place name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aA2-R8-eWd">
@@ -263,6 +263,7 @@
                     <navigationItem key="navigationItem" id="muk-Va-UxR"/>
                     <connections>
                         <outlet property="mapView" destination="MsB-uO-1GO" id="pzF-3N-QcA"/>
+                        <segue destination="8Lm-t9-X9n" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="QU6-6v-SgC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbc-Wf-2VP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -308,6 +309,9 @@
             <point key="canvasLocation" x="2157.971014492754" y="-121.20535714285714"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="QU6-6v-SgC"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="clickme" width="750" height="1334"/>
         <systemColor name="systemBackgroundColor">
