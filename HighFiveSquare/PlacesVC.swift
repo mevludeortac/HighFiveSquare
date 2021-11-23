@@ -66,7 +66,7 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if objects != nil{
                     self.placeNameArray.removeAll(keepingCapacity: false)
                     self.placeIdArray.removeAll(keepingCapacity: false)
-                    
+                
                     for object in objects!{
                         if let placeName = object.object(forKey: "name") as? String{
                             if let placeId = object.objectId{
