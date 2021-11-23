@@ -92,7 +92,8 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     }
     @objc func backButtonClicked(){
         //parse
-        
+        self.dismiss(animated: true, completion: nil)
+
     }
 
 }

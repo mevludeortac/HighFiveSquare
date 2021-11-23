@@ -13,6 +13,7 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var placeNameArray = [String]()
     var placeIdArray = [String]()
+    var selectedPlaceId = ""
     
 
     @IBOutlet weak var tableView: UITableView!
@@ -66,9 +67,8 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                     self.placeIdArray.removeAll(keepingCapacity: false)
                     for object in objects!{
                         if let placeName = object.object(forKey: "name") as? String{
-                            if let placeId = object.objectId as? String{
+                            if let placeId = object.objectId{
                                 self.placeNameArray.append(placeName)
-                                
                                 self.placeIdArray.append(placeId)
                             }
                         }
@@ -88,12 +88,17 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     //segue işlemi gerçekleşmeden önce ne yapılacağını yazıyoruz
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        <#code#>
+        if segue.identifier == "toDetailsVC" {
+            //detailsVC'yi kaydediyoruz
+            let destinationVC = segue.destination as! DetailsVC
+            destinationVC.chosenPlaceId = selectedPlaceId
+        }
     }
     //bir satıra tıklandıktan sonraki işlemi yazıyoruz
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        selectedPlaceId = placeNameArray[indexPath.row]
+        self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
-        
+       
 
     }
