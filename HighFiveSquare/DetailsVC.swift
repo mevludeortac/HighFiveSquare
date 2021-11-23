@@ -26,6 +26,9 @@ class DetailsVC: UIViewController, MKMapViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+       
+
+        
         getDataFromParse()
         detailsMapView.delegate = self
             
@@ -133,6 +136,7 @@ class DetailsVC: UIViewController, MKMapViewDelegate {
             }
         }
     }
+    
     
     
 }

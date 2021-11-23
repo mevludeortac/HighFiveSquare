@@ -17,6 +17,10 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(saveButtonClicked))
+        
+        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButtonClicked))
 
         mapView.delegate = self
         locationManager.delegate = self
@@ -31,9 +35,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         recognizer.minimumPressDuration = 2
         mapView.addGestureRecognizer(recognizer)
         
-        navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(title: "save", style: UIBarButtonItem.Style.plain, target: self, action: #selector(saveButtonClicked))
         
-        navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "back", style: UIBarButtonItem.Style.plain, target: self, action: #selector(backButtonClicked))
     }
     @objc func ChooseLocation( gestureRecognizer: UIGestureRecognizer){
         //başladıysa
@@ -73,11 +75,11 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         object["description"] = placeModel.placedescription
         object["latitude"] = placeModel.placeLatitude
         object["longitude"] = placeModel.placeLongitude
+        
         //görsel kaydetme
         //görseli dataya çevirmemiz gerekiyor
-        
         if let imageData = placeModel.placeImage.jpegData(compressionQuality: 0.5){
-            object["image"] = PFFileObject(data: imageData)
+            object["image"] = PFFileObject(name: "image.jpg", data: imageData)
         }
         object.saveInBackground { (succes, error) in
             if error != nil{
@@ -91,9 +93,7 @@ class MapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         }
     }
     @objc func backButtonClicked(){
-        //parse
         self.dismiss(animated: true, completion: nil)
-
     }
 
 }

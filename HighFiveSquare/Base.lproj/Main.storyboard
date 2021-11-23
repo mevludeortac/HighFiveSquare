@@ -262,7 +262,7 @@
                     <navigationItem key="navigationItem" id="muk-Va-UxR"/>
                     <connections>
                         <outlet property="mapView" destination="MsB-uO-1GO" id="pzF-3N-QcA"/>
-                        <segue destination="hlm-06-aEH" kind="presentation" modalPresentationStyle="fullScreen" id="T0I-rE-Dsu"/>
+                        <segue destination="hlm-06-aEH" kind="presentation" identifier="fromMapVCtoPlacesVC" modalPresentationStyle="fullScreen" id="jYy-sa-udb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tbc-Wf-2VP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -309,7 +309,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="T0I-rE-Dsu"/>
+        <segue reference="gkd-zT-rDk"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="clickme" width="750" height="1334"/>

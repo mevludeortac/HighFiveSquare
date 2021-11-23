@@ -20,12 +20,13 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-
+        
         navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem.init(barButtonSystemItem: UIBarButtonItem.SystemItem.add, target: self, action: #selector(addButtonClicked))
         
         navigationController?.navigationBar.topItem?.leftBarButtonItem = UIBarButtonItem(title: "logout", style: UIBarButtonItem.Style.plain, target: self, action: #selector(logoutButtonClicked))
+        
+        tableView.delegate = self
+        tableView.dataSource = self
         
         getDataFromParse()
     }
@@ -65,6 +66,7 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                 if objects != nil{
                     self.placeNameArray.removeAll(keepingCapacity: false)
                     self.placeIdArray.removeAll(keepingCapacity: false)
+                    
                     for object in objects!{
                         if let placeName = object.object(forKey: "name") as? String{
                             if let placeId = object.objectId{
@@ -72,7 +74,6 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
                                 self.placeIdArray.append(placeId)
                             }
                         }
-                        
                     }
                     self.tableView.reloadData()
                 }
@@ -96,7 +97,7 @@ class PlacesVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     //bir satıra tıklandıktan sonraki işlemi yazıyoruz
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlaceId = placeNameArray[indexPath.row]
+        selectedPlaceId = placeIdArray[indexPath.row]
         self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
        
